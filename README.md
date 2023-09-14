@@ -1,4 +1,4 @@
-<img alt="LSR Cloud" width="20%" src="https://lucianoromao.com.br/lsr.png">
+<img alt="LSR Cloud" width="40%" src="https://lucianoromao.com.br/lsr.png">
 
 # Entendendo o Mercado do Airbnb no Rio de Janeiro
 
