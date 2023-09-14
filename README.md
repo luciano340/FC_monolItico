@@ -1,6 +1,6 @@
 <img alt="LSR Cloud" width="40%" src="https://lucianoromao.com.br/lsr.png">
 
-# Entendendo o Mercado do Airbnb no Rio de Janeiro
+# Estudo sobre Sistemas Monolíticos
 
 ## Visão Geral 🔎
 Neste código espero mostrar a minha visão de sistemas monolíticos com base nos ensinamentos do curso Full Cycle, onde eu gostaria de mostrar com uma aplicação correta de arquitetura e engenharia de Software poderá tornar a utilização de um sistema monolítico sustentável e atrente.
