@@ -30,4 +30,4 @@ Também irá ser utilizado uma camada de API geral, o qual será cross para todo
 
 
 ## Conclusões 📣
-TBD
+TBD.
