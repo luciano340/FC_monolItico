@@ -1,7 +1,7 @@
 import productAdmFacade from "../facade/product-admin.facede";
 import ProductRepository from "../repository/product.repository";
 import AddProductUseCase from "../usecase/add-product/add-product.usecase";
-import CheckStockUseCase from "../usecase/add-product/check-stock.usecase";
+import CheckStockUseCase from "../usecase/check-stock/check-stock.usecase";
 
 export default class productAdmFacadeFactory {
     static create(){
