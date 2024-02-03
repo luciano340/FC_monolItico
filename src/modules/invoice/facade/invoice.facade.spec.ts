@@ -75,66 +75,66 @@ describe("InvoiceFacade test", () => {
     expect(result.total).toEqual(600);
   });
 
-// it("should find invoice", async () => {
-//     const invoiceItem1Props = {
-//       name: "Name 1",
-//       price: 100,
-//     };
-//     const invoiceItem2Props = {
-//       name: "Name 2",
-//       price: 200,
-//     };
-//     const invoiceItem1 = new InvoiceItems(invoiceItem1Props);
-//     const invoiceItem2 = new InvoiceItems(invoiceItem2Props);
-//     const address = new Address("Street 1", 123, "Complement 1", "City 1", "State 1", "12345");
+it("should find invoice", async () => {
+    const invoiceItem1Props = {
+      name: "Name 1",
+      price: 100,
+    };
+    const invoiceItem2Props = {
+      name: "Name 2",
+      price: 200,
+    };
+    const invoiceItem1 = new InvoiceItems(invoiceItem1Props);
+    const invoiceItem2 = new InvoiceItems(invoiceItem2Props);
+    const address = new Address("Street 1", 123, "Complement 1", "City 1", "State 1", "12345");
 
-//     const invoice = new Invoice(new Id("1"), "Invoice 1","Document 1", address, [invoiceItem1]);
+    const invoice = new Invoice(new Id("1"), "Invoice 1","Document 1", address, [invoiceItem1]);
     
-//     await InvoiceModel.create({
-//       id: invoice.id.id,
-//       name: invoice.name,
-//       document: invoice.document,
-//       city: invoice.address.city,
-//       street: invoice.address.street,
-//       number: invoice.address.number,
-//       complement: invoice.address.complement,
-//       state: invoice.address.state,
-//       zipCode: invoice.address.zipCode,
-//       createdAt: invoice.createdAt,
-//       updatedAt: invoice.updatedAt,
-//     });
-//     console.log(invoice.items)
-//     invoice.items.forEach(async (item) => {
-//        await InvoiceItemsModel.create({
-//         id: item.id.id,
-//         name: item.name,
-//         price: item.price,
-//         invoiceID: invoice.id.id,
-//         createdAt: item.createdAt,
-//         updatedAt: item.updatedAt,
-//       });
-//     });
+    await InvoiceModel.create({
+      id: invoice.id.id,
+      name: invoice.name,
+      document: invoice.document,
+      city: invoice.address.city,
+      street: invoice.address.street,
+      number: invoice.address.number,
+      complement: invoice.address.complement,
+      state: invoice.address.state,
+      zipCode: invoice.address.zipCode,
+      createdAt: invoice.createdAt,
+      updatedAt: invoice.updatedAt,
+    });
+    console.log(invoice.items)
+    invoice.items.forEach(async (item) => {
+       await InvoiceItemsModel.create({
+        id: item.id.id,
+        name: item.name,
+        price: item.price,
+        invoiceID: invoice.id.id,
+        createdAt: item.createdAt,
+        updatedAt: item.updatedAt,
+      });
+    });
     
-//     const invoiceFacade = InvoiceFacadeFactory.create();
-//     const input = {
-//       id: "1",
+    const invoiceFacade = InvoiceFacadeFactory.create();
+    const input = {
+      id: "1",
 
-//     };
-//     const result = await invoiceFacade.find(input);
+    };
+    const result = await invoiceFacade.find(input);
 
   
-//     expect(invoice.id.id).toEqual(result.id);
-//     expect(invoice.name).toEqual(result.name);
-//     expect(invoice.document).toEqual(result.document);
-//     expect(invoice.createdAt).toEqual(result.createdAt);
-//     expect(invoice.address.city).toEqual(result.address.city);
-//     expect(invoice.address.complement).toEqual(result.address.complement);
-//     expect(invoice.address.number).toEqual(result.address.number);
-//     expect(invoice.address.state).toEqual(result.address.state);
-//     expect(invoice.address.street).toEqual(result.address.street);
-//     expect(invoice.address.zipCode).toEqual(result.address.zipCode);
-//     expect(invoice.items.length).toBe(1);
-//     expect(invoice.items[0].name).toEqual(result.items[0].name);
-//     expect(invoice.items[0].price).toEqual(result.items[0].price);
-//   });
+    expect(invoice.id.id).toEqual(result.id);
+    expect(invoice.name).toEqual(result.name);
+    expect(invoice.document).toEqual(result.document);
+    expect(invoice.createdAt).toEqual(result.createdAt);
+    expect(invoice.address.city).toEqual(result.address.city);
+    expect(invoice.address.complement).toEqual(result.address.complement);
+    expect(invoice.address.number).toEqual(result.address.number);
+    expect(invoice.address.state).toEqual(result.address.state);
+    expect(invoice.address.street).toEqual(result.address.street);
+    expect(invoice.address.zipCode).toEqual(result.address.zipCode);
+    expect(invoice.items.length).toBe(1);
+    expect(invoice.items[0].name).toEqual(result.items[0].name);
+    expect(invoice.items[0].price).toEqual(result.items[0].price);
+  });
 });
