@@ -1,3 +1,5 @@
+import Address from "../../invoice/value-object/address";
+
 export interface AddClientFacadeInputDto {
     id?: string;
     name: string;
@@ -13,9 +15,16 @@ export interface FindClientFacedeOutputDto {
     id: string;
     name: string;
     email: string;
-    address: string;
-    createAt: Date;
+    document: string;
+    address: Address;
+    createdAt: Date;
     updatedAt: Date;
+    street: string;
+    number: number;
+    complement: string; 
+    city: string;
+    state: string; 
+    zipCode: string; 
 }
 
 export default interface ClientAdmFacadeInterface {
