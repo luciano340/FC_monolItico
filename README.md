@@ -30,6 +30,3 @@ Também irá ser utilizado uma camada de API geral, o qual será cross para todo
 
 <img alt="Camada controller API" width="60%" src="https://lucianoromao.com.br/FC_monolitico/api.PNG">
 
-
-## Conclusões 📣
-TBD.
